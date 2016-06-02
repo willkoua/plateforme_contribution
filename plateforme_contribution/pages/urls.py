@@ -3,5 +3,6 @@ from pages import views
 
 urlpatterns = patterns(
     '',
-    url(r'^$', views.home, name='home'),
+    url(r'^$', views.Home.as_view(), name='home'),
+    url(r'^contact/$', views.Contact.as_view(), name='contact'),
 )
