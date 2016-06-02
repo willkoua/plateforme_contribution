@@ -1,0 +1,21 @@
+language: python
+
+python:
+  - 3.5
+
+notifications:
+  email:
+    on_success: change
+    on_failure: change
+
+install:
+  - pip install -r requirements.txt
+  - pip install coveralls
+  - pip install pep8
+
+script:
+  - coverage run --omit=*.virtualenvs*,*virtualenv* plateforme_contribution/manage.py test plateforme_contribution/
+  - pep8 --count --show-source --exclude=migrations,plateforme_contribution/plateforme_contribution,manage.py plateforme_contribution/
+
+after_success:
+  coveralls
