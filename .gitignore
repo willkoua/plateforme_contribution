@@ -1,2 +1,3 @@
 *.pyc
 .idea/*
+./plateforme_contribution/db.sqlite3
