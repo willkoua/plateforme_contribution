@@ -1,10 +1,49 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Title</title>
-</head>
-<body>
+{% extends "landing_base.html" %}
 
-</body>
-</html>
+{% block title %}Liste des projets{% endblock %}
+
+{% block content %}
+    <div class="row">
+        <div class="page-header">
+            <h2>Liste des projets</h2>
+        </div>
+    </div>
+    <div class="row">
+        {% if projects.count %}
+            {% if projects %}
+            <table class="panel panel-default table table-hover table-condensed sortable">
+                <thead>
+                    <tr>
+                        <td>Name</td>
+                        <td>Organisation</td>
+                    </tr>
+                </thead>
+                <tbody>
+                {% for project in projects %}
+                    <tr>
+                        <td>
+                            <a href='#'>
+                                {{project.name}}
+                            </a>
+                        </td>
+                        <td>
+                            <a href='#'>
+                                {{project.organization}}
+                            </a>
+                        </td>
+                    </tr>
+                {% endfor %}
+                </tbody>
+            </table>
+            {% else %}
+                <div class="alert alert-warning">
+                    Aucun de vos projets ne correspond à ce statut.
+                </div>
+            {% endif %}
+        {% else %}
+            <div class="alert alert-warning">
+                Vous n'avez aucun projet pour le moment.
+            </div>
+        {% endif %}
+    </div>
+{% endblock %}

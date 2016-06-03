@@ -3,4 +3,9 @@ from projects import views
 
 urlpatterns = patterns(
     '',
+    url(
+        r'^list/$',
+        views.ProjectList.as_view(),
+        name='project_list'
+    ),
 )
