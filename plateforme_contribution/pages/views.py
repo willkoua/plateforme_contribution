@@ -15,6 +15,10 @@ class Contact(generic.TemplateView):
     template_name = 'pages/contact.html'
 
 
+class Calendar(generic.TemplateView):
+    template_name = 'pages/calendar.html'
+
+
 class LogoutView(generic.RedirectView):
 
     def get(self, request, *args, **kwargs):

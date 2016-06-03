@@ -20,9 +20,16 @@ urlpatterns = patterns(
         views.LogoutView.as_view(),
         name='logout'
     ),
+
     url(
         r'^contact/$',
         views.Contact.as_view(),
         name='contact'
+    ),
+
+    url(
+        r'^calendar/$',
+        views.Calendar.as_view(),
+        name='calendar'
     ),
 )
