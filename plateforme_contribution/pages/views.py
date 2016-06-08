@@ -19,6 +19,10 @@ class Calendar(generic.TemplateView):
     template_name = 'pages/calendar.html'
 
 
+class Settlement(generic.TemplateView):
+    template_name = 'pages/settlement.html'
+
+
 class LogoutView(generic.RedirectView):
 
     def get(self, request, *args, **kwargs):

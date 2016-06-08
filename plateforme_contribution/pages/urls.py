@@ -32,4 +32,10 @@ urlpatterns = patterns(
         views.Calendar.as_view(),
         name='calendar'
     ),
+
+    url(
+        r'^settlement/$',
+        views.Settlement.as_view(),
+        name='settlement'
+    ),
 )
