@@ -1,0 +1,20 @@
+{% extends "landing_base.html" %}
+
+{% block title %}Détail du projet{% endblock %}
+
+{% block content %}
+    <div class="row">
+        <div class="page-header">
+            <h1>
+                {{project.name}}
+            </h1>
+            <small>Un projet de : <strong>{{project.organization}}</strong></small>
+        </div>
+    </div>
+    <div class="row">
+
+        {% autoescape off %}
+        {{content_html}}
+        {% endautoescape %}
+    </div>
+{% endblock %}
