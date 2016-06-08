@@ -1,14 +1,32 @@
 {% extends "landing_base.html" %}
 <!-- Load internationalisation utils-->
 {% load i18n %}
+{% load staticfiles %}
 {% block title %}Accueil{% endblock %}
 
+{% block extrahead %}
+    <link href="{% static 'thermometer/demov1/css/styles.css' %}" rel="stylesheet" type="text/css">
+    <link href="{% static 'thermometer/demov1/css/goal-thermometer.css' %}" rel="stylesheet" type="text/css">
+{% endblock %}
+
+{% block extrajs %}
+    <script type="text/javascript">
+        var currentAmount = {{ number_of_contribution }}
+    </script>
+    <script src="http://code.jquery.com/jquery-latest.js"></script>
+    <script type="text/javascript" src="{% static 'thermometer/demov1/js/goal-thermometer.js' %}"></script>
+{% endblock %}
 {% block content %}
     <div class="row">
-        <div class="col-sm-12">
-            <h2>A propos du projet</h2>
-            <p class="text-justify">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec a diam lectus. Sed sit amet ipsum mauris. Maecenas congue ligula ac quam viverra nec consectetur ante hendrerit. Donec et mollis dolor. Praesent et diam eget libero egestas mattis sit amet vitae augue. Nam tincidunt congue enim, ut porta lorem lacinia consectetur. Donec ut libero sed arcu vehicula ultricies a non tortor. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean ut gravida lorem. Ut turpis felis.</p>
-            <p class="text-justify">Pulvinar a semper sed, adipiscing id dolor. Pellentesque auctor nisi id magna consequat sagittis. Curabitur dapibus enim sit amet elit pharetra tincidunt feugiat nisl imperdiet. Ut convallis libero in urna ultrices accumsan. Donec sed odio eros. Donec viverra mi quis quam pulvinar at malesuada arcu rhoncus. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. In rutrum accumsan ultricies. Mauris vitae nisi at sem facilisis semper ac in est.</p>
+        <div class="col-sm-2">
+            <div class="goal-thermometer"></div>
+        </div>
+        <div class="col-sm-10">
+            <div class="page-header">
+                <h3>C0deTribuThon : Préparez-vous à contribuer</h3>
+            </div>
+            <p class="text-justify">Pas de vacances pour les membres de la <em>Maison du logiciel libre</em>. ML2 lance un défi à ses membres étudiants...</p>
+            <p><strong>Réussir 100 contributions à des projets du logiciel libre entre le 21 juin et le 20 septembre 2016</strong>!!!</p>
         </div>
     </div>
 {% endblock %}
