@@ -1,6 +1,5 @@
 from django.db import models
 from plateforme_contribution.behaviours import Timestampable
-from members.models import Member
 
 # Create your models here.
 PROJECT_STATUS_CHOICES = (
@@ -50,18 +49,6 @@ class Project(Timestampable, models.Model):
             verbose_name='Description du projet'
     )
 
-    status = models.CharField(
-            verbose_name='Status',
-            max_length=10,
-            choices=PROJECT_STATUS_CHOICES,
-    )
-
-    creator = models.ForeignKey(
-            Member,
-            verbose_name='Creator',
-            related_name='Projects'
-    )
-
     organization = models.ForeignKey(
             Organization,
             verbose_name='Organization',
@@ -91,10 +78,13 @@ class Contribution(Timestampable, models.Model):
             related_name='contributions',
     )
 
-    creator = models.ForeignKey(
-            Member,
-            verbose_name='Creator',
-            related_name='contributions'
+    email = models.EmailField(
+            verbose_name = 'Courriel',
+    )
+
+    username = models.CharField(
+            verbose_name = "Nom d'utilisateur",
+            max_length=50,
     )
 
     def __str__(self):
