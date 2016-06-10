@@ -79,11 +79,11 @@ class Contribution(Timestampable, models.Model):
     )
 
     email = models.EmailField(
-            verbose_name = 'Courriel',
+            verbose_name='Courriel',
     )
 
     username = models.CharField(
-            verbose_name = "Nom d'utilisateur",
+            verbose_name="Nom d'utilisateur",
             max_length=50,
     )
 

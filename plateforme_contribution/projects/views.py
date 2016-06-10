@@ -42,9 +42,8 @@ class ProjectDetail(generic.DetailView):
         context['content_html'] = md.convert(self.object.description)
         return context
 
+
 class ContributionCreate(generic.CreateView):
     model = Contribution
     template_name = 'contributions/create.html'
     fields = "__all__"
-
-

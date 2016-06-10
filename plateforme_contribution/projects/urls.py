@@ -12,7 +12,8 @@ urlpatterns = patterns(
         r'^detail/(?P<pk>\d+)$',
         views.ProjectDetail.as_view(),
         name='project_detail'
-    ),url(
+    ),
+    url(
         r'^contribution/create/$',
         views.ContributionCreate.as_view(),
         name='contribution_create'
