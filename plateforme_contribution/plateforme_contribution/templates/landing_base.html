@@ -35,14 +35,9 @@
             </div><!-- header-inner -->
         </header>
 
+        {% block content %}{% endblock %}
 
-
-        <div class="row">
-            <div class="col-sm-offset-1 col-sm-10">
-                {% block content %}{% endblock %}
-            </div>
-        </div>
-
+        <script src="{% static 'js/libs/jquery-2.2.2.min.js' %}" type="application/javascript"></script>
         <script src="{% static 'bootstrap-3.3.6-dist/js/bootstrap.min.js' %}" type="application/javascript"></script>
 
         <!-- WARNING :  Do not move this line before a manual import of script! -->

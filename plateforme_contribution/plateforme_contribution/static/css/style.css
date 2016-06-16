@@ -1,3 +1,7 @@
+body{
+    background: #95c9c3 url(grunge.png) repeat-x center;
+}
+
 a {
   text-decoration: none;
   color: #F6EDD8;
@@ -5,8 +9,7 @@ a {
 
 /* Texture */
 .header-inner{
-    background: url(grain.png) repeat;
-    background-color: #c51919;
+    background: #c51919 url(grain.png) repeat;
 }
 
 .header-inner {
@@ -72,3 +75,4 @@ a {
   left: 50%;
   margin-left: -75px;
 }
+
