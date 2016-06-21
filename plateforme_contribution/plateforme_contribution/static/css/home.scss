@@ -125,63 +125,14 @@ h1, h2, h3, h4, h5, h6 {
   float: left;
 }
 
-/* Icon Boxes Vert
+/* partner
 =================================================================== */
-.icons-box-vert-container {
-  float:left;
+.bloc-img-partner{
+    height: 100px;
 }
 
-.icons-boxes-vert-container {
-  float:left;
-}
-
-.icons-box-vert {
-  border: 1px solid #fff;
-  padding: 30px 15px 10px 15px;
-}
-
-.icons-box-vert:hover {
-  background: #fcfcfc;
-  border: 1px solid #f6f6f6;
-}
-
-.icons-box-vert-info {
-  float: right;
-  margin-top: -6px;
-  margin-bottom: 6px;
-  margin-left: 20px;
-  width: 70%;
-}
-
-.icons-box-vert h3 {
-  float: left;
-  margin-top: -10px;
-}
-
-.icons-box-vert p {
-  float: left !important;
-}
-
-.icons-box-vert i {
-  float: left;
-}
-
-.icons-box-vert i.circle {
-  float: left !important;
-}
-
-.icons-box-vert i.circle {
-  -webkit-border-radius: 50em;
-  -moz-border-radius: 50em;
-  border-radius: 50em;
-  -webkit-box-shadow: 0px 0px 0px 3px rgba(0,0,0,1);
-  -moz-box-shadow: 0px 0px 0px 3px rgba(0,0,0,1);
-  box-shadow: 0px 0px 0px 3px rgba(0,0,0,1);
-  opacity: .1;
-}
-
-.icons-left {
-  float: left;
+.img-responsive[alt=firefox]{
+    margin-left: 30%;
 }
 
 /* About
