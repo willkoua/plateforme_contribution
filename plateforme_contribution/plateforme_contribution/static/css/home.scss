@@ -1,46 +1,209 @@
-/* general */
-.section {
-  padding: 80px 0;
-  height: 600px;
-}
+@import 'global';
+@import url("libs/parallax-slider.css");
 
-/* section 1 */
-#section-1{
-  margin: 0;
-  padding: 0;
-}
-.banner {
-  width: 100%;
-  height: 100%;
-  min-height: 100%;
-  position: relative;
-  color: #fff;
-}
-.banner-image {
-  vertical-align: middle;
-  min-height: 100%;
-  width: 100%;
-  background-image: url("header.png");
-}
-.banner:after {
+/* Header
+=================================================================== */
+#logo a {
+  display: block;
+  width: 150px;
+  height: 150px;
+  background-image: url(logo.png);
+  background-repeat: no-repeat;
+  background-position: top;
+  background-size: 150px 150px;
+  text-indent: -9000px;
   position: absolute;
-  top: 0;
+  top: 5px;
   left: 0;
-  right: 0;
-  bottom: 0;
-  background: url(grain.png) repeat;
-  content: "";
-}
-.banner-caption {
+  z-index: 20;
+  -webkit-transition: top 0.2s ease;
+  transition: top 0.2s ease;
+  left: 50%;
+  margin-left: -75px; }
+
+#social-links {
+  margin-top: 20px;
+  float: right; }
+
+.navbar,
+.navbar-inner,
+.nav {
+  float: right;
+  background: $princ_color url(grain.png) repeat !important;
+  border: none;
+  -webkit-box-shadow: none;
+  -moz-box-shadow: none;
+  box-shadow: none;
+  padding: 0px;
+  margin: 0; }
+
+.navbar-inner {
+  padding-left: 0px !important;
+  padding-right: 0px !important; }
+
+.navbar .btn-navbar {
   position: absolute;
-  top: 40%;
+  right: 50px;
+  top: 15px; }
+
+#main-nav-mobil {
+  width: 100%; }
+
+#main-nav {
   width: 100%;
-  z-index: 2;
+  position: relative;
+  bottom: 25px; }
+
+#main-nav li {
+  width: 20%;
+  text-align: center;
+  font-size: 27px; }
+
+#main-nav li a {
+  color: #f3e4c8; }
+
+#main-nav li a:hover {
+  color: #fff; }
+
+#main-nav .right-logo {
+  margin-left: 20%; }
+
+/** corps **/
+#wrapper {
+  background: #fff;
+  padding-top: 20px;
 }
-.subfooter {
-  background-color: #fafafa;
-  border-top: 1px solid #f3f3f3;
-  border-bottom: 1px solid #f3f3f3;
-  padding: 40px 0;
+.progress{
+    margin-top: 36%;
 }
 
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: "Boogaloo" !important;
+  font-weight: normal !important;
+  color: #666;
+  margin: 0;
+  padding: 0; }
+
+.title {
+  border-bottom: 3px double #f6f6f6;
+  margin-bottom: 10px; }
+
+.title h1, .title h2, .title h3, .title h4, .title h5, .title h6 {
+  border-bottom: 5px double $princ_color !important;
+  margin-bottom: -4px !important;
+  display: inline-block !important;
+  padding: 0px 10px !important;
+  margin-left: 15px !important;
+  margin-right: 15px !important; }
+
+/* Icon Boxes
+=================================================================== */
+.icons-box-container {
+  float:left;
+}
+
+.icons-box {
+  text-align: center;
+  border: 1px solid #fff;
+  padding: 30px 10px 10px 10px;
+}
+
+.icons-box:hover {
+  background: #fcfcfc;
+  border: 1px solid #f6f6f6;
+}
+
+.icons-box h3 {
+  margin: 0 auto;
+  padding-top: 10px;
+  border-bottom: 3px double #f6f6f6;
+  margin-bottom: 10px;
+}
+
+.icons-box p {
+  float: left;
+}
+
+/* Icon Boxes Vert
+=================================================================== */
+.icons-box-vert-container {
+  float:left;
+}
+
+.icons-boxes-vert-container {
+  float:left;
+}
+
+.icons-box-vert {
+  border: 1px solid #fff;
+  padding: 30px 15px 10px 15px;
+}
+
+.icons-box-vert:hover {
+  background: #fcfcfc;
+  border: 1px solid #f6f6f6;
+}
+
+.icons-box-vert-info {
+  float: right;
+  margin-top: -6px;
+  margin-bottom: 6px;
+  margin-left: 20px;
+  width: 70%;
+}
+
+.icons-box-vert h3 {
+  float: left;
+  margin-top: -10px;
+}
+
+.icons-box-vert p {
+  float: left !important;
+}
+
+.icons-box-vert i {
+  float: left;
+}
+
+.icons-box-vert i.circle {
+  float: left !important;
+}
+
+.icons-box-vert i.circle {
+  -webkit-border-radius: 50em;
+  -moz-border-radius: 50em;
+  border-radius: 50em;
+  -webkit-box-shadow: 0px 0px 0px 3px rgba(0,0,0,1);
+  -moz-box-shadow: 0px 0px 0px 3px rgba(0,0,0,1);
+  box-shadow: 0px 0px 0px 3px rgba(0,0,0,1);
+  opacity: .1;
+}
+
+.icons-left {
+  float: left;
+}
+
+/* About
+=================================================================== */
+.team-name {
+  padding: 15px 0;
+  border-bottom: 1px solid #e9e9e9;
+  margin-bottom: 15px;
+  font-family: "Boogaloo";
+  font-size: 18px;
+  text-align: center;
+
+}
+
+.team-name span {
+  font-size: 12px;
+  font-weight: normal;
+  color: #888;
+}
+
+.team-about p {
+  padding: 0 0 15px 0;
+  border-bottom: 1px solid #e9e9e9;
+  margin-bottom: 15px;
+}
