@@ -1,0 +1,151 @@
+@import 'global';
+@import url("libs/parallax-slider.css");
+
+/* Header
+=================================================================== */
+#logo a {
+  display: block;
+  width: 150px;
+  height: 150px;
+  background-image: url(logo.png);
+  background-repeat: no-repeat;
+  background-position: top;
+  background-size: 150px 150px;
+  text-indent: -9000px;
+  position: absolute;
+  top: 5px;
+  left: 0;
+  z-index: 20;
+  -webkit-transition: top 0.2s ease;
+  transition: top 0.2s ease;
+  left: 50%;
+  margin-left: -75px; }
+
+#social-links {
+  margin-top: 20px;
+  float: right; }
+
+.navbar,
+.navbar-inner,
+.nav {
+  float: right;
+  background: $princ_color url(grain.png) repeat !important;
+  border: none;
+  -webkit-box-shadow: none;
+  -moz-box-shadow: none;
+  box-shadow: none;
+  padding: 0px;
+  margin: 0; }
+
+.navbar-inner {
+  padding-left: 0px !important;
+  padding-right: 0px !important; }
+
+.navbar .btn-navbar {
+  position: absolute;
+  right: 50px;
+  top: 15px; }
+
+#main-nav-mobil {
+  width: 100%; }
+
+#main-nav {
+  width: 100%;
+  position: relative;
+  bottom: 25px; }
+
+#main-nav li {
+  width: 20%;
+  text-align: center;
+  font-size: 27px; }
+
+#main-nav li a {
+  color: #f3e4c8; }
+
+#main-nav li a:hover {
+  color: #fff; }
+
+#main-nav .right-logo {
+  margin-left: 20%; }
+
+/** corps **/
+#wrapper {
+  background: #fff;
+  padding-top: 20px;
+}
+.progress{
+    margin-top: 36%;
+}
+
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: "Boogaloo" !important;
+  font-weight: normal !important;
+  color: #666;
+  margin: 0;
+  padding: 0; }
+
+.title {
+  border-bottom: 3px double #f6f6f6;
+  margin-bottom: 10px; }
+
+.title h1, .title h2, .title h3, .title h4, .title h5, .title h6 {
+  border-bottom: 5px double $princ_color !important;
+  margin-bottom: -4px !important;
+  display: inline-block !important;
+  padding: 0px 10px !important;
+  margin-left: 15px !important;
+  margin-right: 15px !important; }
+
+/* Icon Boxes
+=================================================================== */
+.icons-box-container {
+  float:left;
+}
+
+.icons-box {
+  text-align: center;
+  border: 1px solid #fff;
+  padding: 30px 10px 10px 10px;
+}
+
+.icons-box:hover {
+  background: #fcfcfc;
+  border: 1px solid #f6f6f6;
+}
+
+.icons-box h3 {
+  margin: 0 auto;
+  padding-top: 10px;
+  border-bottom: 3px double #f6f6f6;
+  margin-bottom: 10px;
+}
+
+.icons-box p {
+  float: left;
+}
+
+/* partner
+=================================================================== */
+.bloc-img-partner{
+    height: 100px;
+}
+
+.img-responsive[alt=firefox]{
+    margin-left: 30%;
+}
+
+/* Notice
+====================================================================== */
+
+.hero-unit {
+  background: #fff url(../img/bg-k10.png);
+  border-left: 4px solid $princ_color;
+  padding: 13px 13px 13px 15px;
+  font-style: italic;
+  margin: 20px auto;
+  -webkit-border-radius: 0px;
+  -moz-border-radius: 0px;
+  border-radius: 0px;
+  font-size: 14px !important;
+}

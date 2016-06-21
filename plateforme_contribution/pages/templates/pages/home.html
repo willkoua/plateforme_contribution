@@ -1,14 +1,195 @@
 {% extends "landing_base.html" %}
 <!-- Load internationalisation utils-->
 {% load i18n %}
+{% load staticfiles %}
 {% block title %}Accueil{% endblock %}
 
+{% block extrahead %}
+    <link href="{% static 'css/home.css' %}" rel="stylesheet">
+{% endblock %}
+
+{% block extrajs %}
+    <script type="text/javascript">
+        var currentAmount = {{ number_of_contribution }}
+    </script>
+
+    <script type="text/javascript" src="{% static 'js/libs/jquery.backstretch.min.js' %}"></script>
+    <script type="text/javascript" src="{% static 'js/home.js' %}"></script>
+
+    <script src="{% static 'js/template/flexslider.js' %}"></script>
+    <script src="{% static 'js/template/carousel.js' %}"></script>
+    <script src="{% static 'js/template/jquery.cslider.js' %}"></script>
+    <script src="{% static 'js/template/slider.js' %}"></script>
+    <script defer="defer" src="{% static 'js/template/custom.js' %}"></script>
+{% endblock %}
+
 {% block content %}
-    <div class="row">
-        <div class="col-sm-12">
-            <h2>A propos du projet</h2>
-            <p class="text-justify">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec a diam lectus. Sed sit amet ipsum mauris. Maecenas congue ligula ac quam viverra nec consectetur ante hendrerit. Donec et mollis dolor. Praesent et diam eget libero egestas mattis sit amet vitae augue. Nam tincidunt congue enim, ut porta lorem lacinia consectetur. Donec ut libero sed arcu vehicula ultricies a non tortor. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean ut gravida lorem. Ut turpis felis.</p>
-            <p class="text-justify">Pulvinar a semper sed, adipiscing id dolor. Pellentesque auctor nisi id magna consequat sagittis. Curabitur dapibus enim sit amet elit pharetra tincidunt feugiat nisl imperdiet. Ut convallis libero in urna ultrices accumsan. Donec sed odio eros. Donec viverra mi quis quam pulvinar at malesuada arcu rhoncus. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. In rutrum accumsan ultricies. Mauris vitae nisi at sem facilisis semper ac in est.</p>
+
+    <div class="slider-wrapper">
+        <div id="da-slider" class="da-slider">
+            <div class="da-slide">
+                <h2>Twitter Bootstrap</h2>
+                <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.</p>
+                <a href="#" class="da-link">Read more</a>
+                <div class="da-img"><img src="{% static 'img/parallax-slider/twitter.png' %}" alt="image01" /></div>
+            </div>
+            <div class="da-slide">
+                <h2>Préparez-vous à contribuer</h2>
+                <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.</p>
+                <a href="#" class="da-link">Read more</a>
+                <div class="da-img"><img src="{% static 'img/parallax-slider/responsive.png' %}" alt="image02" /></div>
+            </div>
+            <div class="da-slide">
+                <h2>HTML5</h2>
+                <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.</p>
+                <a href="#" class="da-link">Read more</a>
+                <div class="da-img"><img src="{% static 'img/parallax-slider/html5.png' %}" alt="image03" /></div>
+            </div>
+            <div class="da-slide">
+                <h2>CSS3</h2>
+                <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.</p>
+                <a href="#" class="da-link">Read more</a>
+                <div class="da-img"><img src="{% static 'img/parallax-slider/css3.png' %}" alt="image04" /></div>
+            </div>
+            <div class="progress">
+                <div class="progress-bar progress-bar-danger" role="progressbar" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100" style="width: 80%">
+                    80%
+                </div>
+            </div>
         </div>
     </div>
+
+    <!--start: Wrapper-->
+    <div id="wrapper">
+
+        <!--start: Container -->
+        <div class="container">
+            <div class="hero-unit">
+                <p>
+                    Travailler et participer au C0deTribuThon Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat
+                    Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat Lorem ipsum dolor sit amet, consectetuer
+                    adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat
+                </p>
+                <p><a class="btn btn-danger btn-large">Learn more &raquo;</a></p>
+            </div>
+            <hr>
+
+            <!-- start: Row -->
+            <div class="row">
+                     <h1 class="text-center">C'est quoi C0deTribuThon</h1>
+                <br>
+                <div class="col-md-4">
+                    <div class="icons-box">
+                        <img src="{% static 'img/linux.png' %}" alt="logo linux">
+                        <div class="title"><h3>Easy to use</h3></div>
+                        <p>
+                            Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.
+                        </p>
+                        <div class="clear"></div>
+                    </div>
+                </div>
+
+                <div class="col-md-4">
+                    <div class="icons-box">
+                        <img src="{% static 'img/ubuntu.png' %}" alt="logo linux">
+                        <div class="title"><h3>Responsive</h3></div>
+                        <p>
+                            Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.
+                        </p>
+                        <div class="clear"></div>
+                    </div>
+                </div>
+
+                <div class="col-md-4">
+                    <div class="icons-box">
+                        <img src="{% static 'img/ff.png' %}" alt="logo linux">
+                        <div class="title"><h3>User friendly</h3></div>
+                        <p>
+                            Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.
+                        </p>
+                        <div class="clear"></div>
+                    </div>
+                </div>
+
+            </div>
+            <!-- end: Row -->
+
+            <hr>
+
+            <!-- start: Row -->
+            <div class="row">
+                <h1 class="text-center">Nos partenaires</h1>
+                <h3 class="text-center">Edition 2016</h3>
+                <br>
+                <ul class="thumbnails">
+                    <div class="col-md-3">
+                        <div class="thumbnail">
+                            <div class="bloc-img-partner"><img src="{% static 'img/partners/ff.png' %}" alt="firefox" class="img-responsive" width="37%"></div>
+                            <hr>
+                            <div class="caption">
+                                <h3>Header Name</h3>
+                                <p>Description</p>
+                                <p align="center"><a href="http://bootsnipp.com/" class="btn btn-danger btn-block">Description</a>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-3">
+                        <div class="thumbnail">
+                            <div class="bloc-img-partner"><img src="{% static 'img/partners/google.png' %}" alt="google" class="img-responsive" ></div>
+
+                            <hr>
+                            <div class="caption">
+                                <h3>Header Name</h3>
+                                <p>Description</p>
+                                <p align="center"><a href="http://bootsnipp.com/" class="btn btn-danger btn-block">Description</a>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-3">
+                        <div class="thumbnail">
+                            <div class="bloc-img-partner"><img src="{% static 'img/partners/redhat.png' %}" alt="redhat" class="img-responsive" ></div>
+
+                             <hr>
+                            <div class="caption">
+                                <h3>Header Name</h3>
+                                <p>Description</p>
+                                <p align="center"><a href="http://bootsnipp.com/" class="btn btn-danger btn-block">Description</a>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-3">
+                        <div class="thumbnail">
+                            <div class="bloc-img-partner"><img src="{% static 'img/partners/sflinux.png' %}" alt="savoir faire linux" class="img-responsive"></div>
+
+                            <hr>
+                            <div class="caption">
+                                <h3>Header Name</h3>
+                                <p>Description</p>
+                                <p align="center"><a href="http://bootsnipp.com/" class="btn btn-danger btn-block">Description</a>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+                </ul>
+
+            </div>
+            <!-- end: Row -->
+
+
+
+
+
+        </div>
+        <!--end: Container-->
+
+    </div>
+    <!-- end: Wrapper  -->
+
+
+
+
 {% endblock %}
