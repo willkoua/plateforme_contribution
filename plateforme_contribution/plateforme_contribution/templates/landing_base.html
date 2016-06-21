@@ -6,41 +6,40 @@
         <title>
             {% block title %}Plateforme de contribution{% endblock %}
         </title>
+        <meta name="description" content="blabal"/>
+        <meta name="keywords" content="fvsdfvsdv" />
+        <meta name="author" content="sdvsdvdsv"/>
+        <!-- end: Meta -->
+
+        <!-- start: Mobile Specific -->
+        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+        <!-- end: Mobile Specific -->
+
+        <!-- start: Facebook Open Graph -->
+        <meta property="og:title" content=""/>
+        <meta property="og:description" content=""/>
+        <meta property="og:type" content=""/>
+        <meta property="og:url" content=""/>
+        <meta property="og:image" content=""/>
+        <!-- end: Facebook Open Graph -->
+
         <link href="{% static 'bootstrap-3.3.6-dist/css/bootstrap.min.css' %}" rel="stylesheet">
         <link href="{% static 'font-awesome-4.5.0/css/font-awesome.css' %}" rel="stylesheet">
         <link href="{% static 'css/style.css' %}" rel="stylesheet">
+
+        <link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Boogaloo">
 
         {% block extrahead %}{% endblock %}
     </head>
 
     <body class="centered-logo">
-        <header>
-            <div class="header-inner">
-                <div class="container">
-                    <div id="logo">
-                        <a href="">
-                            <h1>C0deTribuThon</h1>
-                        </a>
-                    </div>
-                    <nav role="navigation">
-                        <ul id="main-nav">
-                            <li><a href="#about-me">About Me</a></li>
-                            <li><a href="#portfolio">Portfolio</a></li>
-                            <li class="right-logo"><a href="#my-blog">My Blog</a></li>
-                            <li><a href="#contact-me">Contact Me</a></li>
-                        </ul>
-                    </nav>
-                </div><!-- row -->
-                <hr class="bottom-dashed">
-            </div><!-- header-inner -->
-        </header>
+        {% include 'header.html' %}
 
-        <div class="row">
-            <div class="col-sm-offset-1 col-sm-10">
-                {% block content %}{% endblock %}
-            </div>
-        </div>
+        {% block content %}{% endblock %}
 
+        {% include 'footer.html' %}
+
+        <script src="{% static 'js/libs/jquery-2.2.2.min.js' %}" type="application/javascript"></script>
         <script src="{% static 'bootstrap-3.3.6-dist/js/bootstrap.min.js' %}" type="application/javascript"></script>
 
         <!-- WARNING :  Do not move this line before a manual import of script! -->
