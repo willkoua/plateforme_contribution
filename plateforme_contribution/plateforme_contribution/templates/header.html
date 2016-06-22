@@ -17,16 +17,16 @@
             <!-- Collect the nav links, forms, and other content for toggling -->
             <div class="collapse navbar-collapse " id="navbar-menu">
                 <ul class="hidden-xs nav navbar-nav" id="main-nav">
-                    <li><a href="#about-me">Home</a></li>
-                    <li><a href="#portfolio">Contrib</a></li>
-                    <li class="right-logo"><a href="#my-blog">My Blog</a></li>
-                    <li><a href="#contact-me">A propos</a></li>
+                    <li><a href="{% url 'pages:home'%}">Home</a></li>
+                    <li><a href="{% url 'pages:calendar'%}">Evenements</a></li>
+                    <li class="right-logo"><a href="{% url 'projects:project_list'%}">Projets</a></li>
+                    <li><a href="{% url 'pages:contact'%}">A propos</a></li>
                 </ul>
                 <ul class="hidden-lg hidden-md hidden-sm nav navbar-nav pull-left" id="main-nav-mobil">
-                    <li><a href="#about-me">About Me</a></li>
-                    <li><a href="#portfolio">Portfolio</a></li>
-                    <li><a href="#my-blog">My Blog</a></li>
-                    <li><a href="#contact-me">Contact Me</a></li>
+                    <li><a href="{% url 'pages:home'%}">Home</a></li>
+                    <li><a href="{% url 'pages:calendar'%}">Evenements</a></li>
+                    <li class="right-logo"><a href="{% url 'projects:project_list'%}">Projets</a></li>
+                    <li><a href="{% url 'pages:contact'%}">A propos</a></li>
                 </ul>
             </div>
             <!-- /.navbar-collapse -->

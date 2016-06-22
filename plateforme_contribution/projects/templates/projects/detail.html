@@ -1,20 +1,31 @@
 {% extends "landing_base.html" %}
 
 {% block title %}Détail du projet{% endblock %}
+{% block pagedesc %}
+    Page de detail pour les projets pour C0deTribuThon
+{% endblock %}
+{% block pagekey %}
+    {{ block.super }}
+{% endblock %}
 
 {% block content %}
-    <div class="row">
-        <div class="page-header">
-            <h1>
-                {{project.name}}
-            </h1>
-            <small>Un projet de : <strong>{{project.organization}}</strong></small>
+    <div class="container">
+        <div class="body-general">
+            <div class="row">
+                <div class="page-header">
+                    <h1>
+                        {{project.name}}
+                    </h1>
+                    <small>Un projet de : <strong>{{project.organization}}</strong></small>
+                </div>
+            </div>
+            <div class="row">
+
+                {% autoescape off %}
+                    {{content_html}}
+                {% endautoescape %}
+            </div>
         </div>
     </div>
-    <div class="row">
 
-        {% autoescape off %}
-        {{content_html}}
-        {% endautoescape %}
-    </div>
 {% endblock %}
