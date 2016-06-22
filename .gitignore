@@ -1,3 +1,5 @@
 *.pyc
 .idea/*
-./plateforme_contribution/db.sqlite3
+/plateforme_contribution/db.sqlite3
+/plateforme_contribution/avatars_user/*
+/plateforme_contribution/avatars_org/*

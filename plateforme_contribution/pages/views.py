@@ -13,7 +13,7 @@ class Home(generic.TemplateView):
 
     def get_context_data(self, **kwargs):
         context = super(Home, self).get_context_data(**kwargs)
-        # context['number_of_contribution'] = Contribution.objects.all().count()
+
         context['number_of_contribution'] = 45
         return context
 

@@ -3,6 +3,12 @@
 {% load i18n %}
 {% load staticfiles %}
 {% block title %}Accueil{% endblock %}
+{% block pagedesc %}
+    Page d'accueil pour C0deTribuThon
+{% endblock %}
+{% block pagekey %}
+    {{ block.super }}
+{% endblock %}
 
 {% block extrahead %}
     <link href="{% static 'css/home.css' %}" rel="stylesheet">

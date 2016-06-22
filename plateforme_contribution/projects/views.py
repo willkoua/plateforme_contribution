@@ -1,7 +1,7 @@
 # coding: utf-8
 
 from django.views import generic
-from projects.models import Project, PROJECT_STATUS_CHOICES
+from projects.models import Project, Contribution, PROJECT_STATUS_CHOICES
 from django.shortcuts import render, redirect, get_object_or_404
 import markdown
 
@@ -17,9 +17,7 @@ class ProjectList(generic.ListView):
     def get_queryset(self):
         status = PROJECT_STATUS_CHOICES[1][0]
         print(status)
-        list_project = Project.objects.filter(
-            status=status
-        ).order_by('-create_date')
+        list_project = Project.objects.order_by('-create_date')
 
         return list_project
 
@@ -41,3 +39,9 @@ class ProjectDetail(generic.DetailView):
         md = markdown.Markdown()
         context['content_html'] = md.convert(self.object.description)
         return context
+
+
+class ContributionCreate(generic.CreateView):
+    model = Contribution
+    template_name = 'contributions/create.html'
+    fields = "__all__"

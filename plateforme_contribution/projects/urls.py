@@ -13,4 +13,9 @@ urlpatterns = patterns(
         views.ProjectDetail.as_view(),
         name='project_detail'
     ),
+    url(
+        r'^contribution/create/$',
+        views.ContributionCreate.as_view(),
+        name='contribution_create'
+    ),
 )
