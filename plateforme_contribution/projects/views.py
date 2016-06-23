@@ -15,8 +15,8 @@ class ProjectList(generic.ListView):
         return super(ProjectList, self).dispatch(*args, **kwargs)
 
     def get_queryset(self):
-        status = PROJECT_STATUS_CHOICES[1][0]
-        print(status)
+        # status = PROJECT_STATUS_CHOICES[1][0]
+        # print(status)
         list_project = Project.objects.order_by('-create_date')
 
         return list_project
