@@ -76,8 +76,11 @@
 
 .text-mobil{
     p{
-        font-family: "Courier New";
+        font-family: ralewayThin;
         font-size: 3.5em;
+        strong{
+            font-family: ralewayBold;
+        }
     }
 }
 

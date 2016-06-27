@@ -5,6 +5,19 @@
 
 /* General
 =================================================================== */
+@font-face {
+    font-family: ralewayThin;
+    src: url(fonts/Raleway-Thin.ttf);
+}
+@font-face {
+    font-family: ralewayLight;
+    src: url(fonts/Raleway-Light.ttf);
+}
+@font-face {
+    font-family: ralewayBold;
+    src: url(fonts/Raleway-ExtraBold.ttf);
+}
+
 h1, h2, h3, h4, h5, h6 {
     font-family: "Boogaloo" !important;
     font-weight: normal !important;
@@ -31,6 +44,7 @@ h1, h2, h3, h4, h5, h6 {
 body {
     font-size: 12px;
     padding-top: 50px;
+    font-family: ralewayLight;
 }
 
 a {
@@ -129,10 +143,13 @@ a {
 }
 
 .text-mobil{
-    position: relative;
+    position: absolute;
     bottom: 195px;
     color: white !important;
     font-weight: bolder;
+    left: 27px;
+    top: 171px;
+    display: inline-block;
 }
 
 /* Boody

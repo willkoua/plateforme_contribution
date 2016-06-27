@@ -72,8 +72,10 @@
   padding-top: 20px; }
 
 .text-mobil p {
-  font-family: "Courier New";
+  font-family: ralewayThin;
   font-size: 3.5em; }
+  .text-mobil p strong {
+    font-family: ralewayBold; }
 
 /* Icon Boxes
 =================================================================== */

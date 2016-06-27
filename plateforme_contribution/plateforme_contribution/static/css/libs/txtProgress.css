@@ -3,6 +3,7 @@
     display: block;
     width: 100%;
     position: relative;
+    font-family: ralewayThin;
 }
 
 .tp {
@@ -21,6 +22,7 @@
 .progress {
     padding: 2px 0;
     width: 0;
+    height: 32px !important;
     text-align: right;
     height: auto;
 }
@@ -76,4 +78,5 @@
 
 .percent {
     color: white;
+    font-size: 1.5em;
 }
