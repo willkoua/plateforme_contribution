@@ -3,6 +3,26 @@
 @import 'global';
 @import url("libs/social-icons.css");
 
+/* General
+=================================================================== */
+h1, h2, h3, h4, h5, h6 {
+    font-family: "Boogaloo" !important;
+    font-weight: normal !important;
+    color: #666;
+    margin: 0;
+    padding: 0; }
+
+.title {
+    border-bottom: 3px double #f6f6f6;
+    margin-bottom: 10px; }
+
+.title h1, .title h2, .title h3, .title h4, .title h5, .title h6 {
+    border-bottom: 5px double $princ_color !important;
+    margin-bottom: -4px !important;
+    display: inline-block !important;
+    padding: 0px 10px !important;
+    margin-left: 15px !important;
+    margin-right: 15px !important; }
 
 .clear {
     clear:both;
@@ -108,27 +128,11 @@ a {
     margin-left: 20%;
 }
 
-
-h1, h2, h3, h4, h5, h6 {
-    font-family: "Boogaloo" !important;
-    font-weight: normal !important;
-    color: #666;
-    margin: 0;
-    padding: 0;
-}
-
-.title {
-    border-bottom: 3px double #f6f6f6;
-    margin-bottom: 10px;
-}
-
-.title h1, .title h2, .title h3, .title h4, .title h5, .title h6 {
-    border-bottom: 5px double #89c236 !important;
-    margin-bottom: -4px !important;
-    display: inline-block !important;
-    padding: 0px 10px !important;
-    margin-left:15px !important;
-    margin-right:15px !important;
+.text-mobil{
+    position: relative;
+    bottom: 195px;
+    color: white !important;
+    font-weight: bolder;
 }
 
 /* Boody
