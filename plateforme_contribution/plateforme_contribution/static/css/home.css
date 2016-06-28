@@ -71,27 +71,11 @@
   background: #fff;
   padding-top: 20px; }
 
-.progress {
-  margin-top: 36%; }
-
-h1, h2, h3, h4, h5, h6 {
-  font-family: "Boogaloo" !important;
-  font-weight: normal !important;
-  color: #666;
-  margin: 0;
-  padding: 0; }
-
-.title {
-  border-bottom: 3px double #f6f6f6;
-  margin-bottom: 10px; }
-
-.title h1, .title h2, .title h3, .title h4, .title h5, .title h6 {
-  border-bottom: 5px double #c72323 !important;
-  margin-bottom: -4px !important;
-  display: inline-block !important;
-  padding: 0px 10px !important;
-  margin-left: 15px !important;
-  margin-right: 15px !important; }
+.text-mobil p {
+  font-family: ralewayThin;
+  font-size: 3.5em; }
+  .text-mobil p strong {
+    font-family: ralewayBold; }
 
 /* Icon Boxes
 =================================================================== */
@@ -116,10 +100,16 @@ h1, h2, h3, h4, h5, h6 {
 .icons-box p {
   float: left; }
 
+/* zone contribution
+=================================================================== */
+#contributions .row:first-child {
+  margin-bottom: 15%; }
+
 /* partner
 =================================================================== */
 .bloc-img-partner {
-  height: 100px; }
+  height: 100px;
+  padding-top: 20px; }
 
 .img-responsive[alt=firefox] {
   margin-left: 30%; }

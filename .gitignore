@@ -1,4 +1,5 @@
 *.pyc
+*.map
 .idea/*
 /plateforme_contribution/db.sqlite3
 /plateforme_contribution/avatars_user/*
