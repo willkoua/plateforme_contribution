@@ -13,7 +13,6 @@
   font-family: ralewayBold;
   src: url(fonts/Raleway-ExtraBold.ttf); }
 h1, h2, h3, h4, h5, h6 {
-  font-family: "Boogaloo" !important;
   font-weight: normal !important;
   color: #666;
   margin: 0;

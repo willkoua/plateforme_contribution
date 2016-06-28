@@ -1,10 +1,9 @@
 # coding: utf-8
 
 from django.views import generic
-from projects.models import Project, Contribution, PROJECT_STATUS_CHOICES
+from projects.models import Project, Contribution
 from django.shortcuts import render, redirect, get_object_or_404
 import markdown
-
 
 class ProjectList(generic.ListView):
     # List all project

@@ -1,6 +1,12 @@
 {% extends "landing_base.html" %}
+{% load i18n %}
+{% load staticfiles %}
 
 {% block title %}Liste des projets{% endblock %}
+
+{% block extrahead %}
+    <link href="{% static 'css/project.css' %}" rel="stylesheet">
+{% endblock %}
 
 {% block pagedesc %}
     Page pour la liste des projets pour C0deTribuThon
@@ -20,30 +26,50 @@
             <div class="row">
                 {% if projects.count %}
                     {% if projects %}
-                        <table class="panel panel-default table table-hover table-condensed sortable">
-                            <thead>
-                            <tr>
-                                <td>Name</td>
-                                <td>Organisation</td>
-                            </tr>
-                            </thead>
-                            <tbody>
-                            {% for project in projects %}
-                                <tr>
-                                    <td>
-                                        <a href='{% url "projects:project_detail" project.id %}'>
-                                            {{project.name}}
-                                        </a>
-                                    </td>
-                                    <td>
-                                        <a href='#'>
-                                            {{project.organization}}
-                                        </a>
-                                    </td>
-                                </tr>
-                            {% endfor %}
-                            </tbody>
-                        </table>
+                        {% for project in projects %}
+                            <div class="col-xs-18 col-sm-6 col-md-3">
+                                <div class="thumbnail">
+                                    <img src="http://placehold.it/500x300" alt="">
+                                    <div class="caption">
+                                        <h2>
+                                            <a href='{% url "projects:project_detail" project.id %}'>
+                                                {{project.name}}
+                                            </a>
+                                        </h2>
+                                        <h4>{{project.organization}}</h4>
+                                        <hr>
+                                        <p>
+                                            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Facere, soluta,
+                                            eligendi doloribus sunt minus amet sit debitis repellat. Consectetur,
+                                            culpa itaque odio similique suscipit
+                                        </p>
+
+                                    </div>
+                                    <div class="stat">
+                                        <table class="text-center">
+                                            <tr>
+                                                <td class="clr-green">Contributions</td>
+                                                <td class="clr-red">Participants</td>
+                                            </tr>
+                                            <tr>
+                                                <td class="clr-green">68</td>
+                                                <td class="clr-red">3</td>
+                                            </tr>
+                                        </table>
+                                    </div>
+                                    <div class="caption">
+                                        <ul class="list-inline">
+                                            <li><a href="http://scripteden.com/download/eden-ui/" target="_blank" class="btn-social btn-facebook"><i class="fa fa-facebook"></i></a></li>
+                                            <li><a href="http://scripteden.com/download/eden-ui/" target="_blank" class="btn-social btn-github"><i class="fa fa-github-alt"></i></a></li>
+                                            <li><a href="http://scripteden.com/download/eden-ui/" target="_blank" class="btn-social btn-google-plus"><i class="fa fa-google-plus"></i></a></li>
+                                            <li><a href="http://scripteden.com/download/eden-ui/" target="_blank" class="btn-social btn-linkedin"><i class="fa fa-linkedin"></i></a></li>
+                                            <li><a href="http://scripteden.com/download/eden-ui/" target="_blank" class="btn-social btn-stack-overflow"><i class="fa fa-stack-overflow"></i></a></li>
+                                            <li><a href="http://scripteden.com/download/eden-ui/" target="_blank" class="btn-social btn-twitter"><i class="fa fa-twitter"></i></a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        {% endfor %}
                     {% else %}
                         <div class="alert alert-warning">
                             Aucun de vos projets ne correspond à ce statut.

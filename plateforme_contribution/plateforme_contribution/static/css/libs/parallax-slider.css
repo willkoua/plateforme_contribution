@@ -11,6 +11,10 @@
     font-style: normal;
 }
 
+.da-slider h2{
+	font-family: "Boogaloo" !important;
+}
+
 .da-slider{
 	width: 100%;
 	height: 900px;
