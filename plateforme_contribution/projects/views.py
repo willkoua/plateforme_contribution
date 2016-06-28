@@ -5,6 +5,7 @@ from projects.models import Project, Contribution
 from django.shortcuts import render, redirect, get_object_or_404
 import markdown
 
+
 class ProjectList(generic.ListView):
     # List all project
     template_name = 'projects/list.html'
