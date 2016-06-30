@@ -3,6 +3,9 @@
 from django.views import generic
 from projects.models import Project, Contribution
 from django.shortcuts import render, redirect, get_object_or_404
+from projects.forms import ContributionForm
+from django.contrib import messages
+from django.core.urlresolvers import reverse_lazy
 import markdown
 
 
@@ -15,8 +18,6 @@ class ProjectList(generic.ListView):
         return super(ProjectList, self).dispatch(*args, **kwargs)
 
     def get_queryset(self):
-        # status = PROJECT_STATUS_CHOICES[1][0]
-        # print(status)
         list_project = Project.objects.order_by('-create_date')
 
         return list_project
@@ -44,4 +45,13 @@ class ProjectDetail(generic.DetailView):
 class ContributionCreate(generic.CreateView):
     model = Contribution
     template_name = 'contributions/create.html'
-    fields = "__all__"
+    form_class = ContributionForm
+    def dispatch(self, *args, **kwargs):
+        return super(ContributionCreate, self).dispatch(*args, **kwargs)
+    def get_success_url(self):
+        messages.add_message(
+                self.request,
+                messages.SUCCESS,
+                'Votre ontribution a bien été envoyée'
+        )
+        return reverse_lazy('projects:contribution_create')

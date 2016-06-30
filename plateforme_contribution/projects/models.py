@@ -1,13 +1,6 @@
 from django.db import models
 from plateforme_contribution.behaviours import Timestampable
 
-# Create your models here.
-PROJECT_STATUS_CHOICES = (
-    (u'En attente', 0),
-    (u'Accepté', 1),
-    (u'Rejeté', 2)
-)
-
 
 class Organization(Timestampable, models.Model):
     class Meta:
@@ -82,13 +75,13 @@ class Contribution(Timestampable, models.Model):
     class Meta:
         verbose_name_plural = 'Contributions'
 
-    description = models.TextField(
-            verbose_name='Description du projet'
+    username = models.CharField(
+            verbose_name="Nom d'utilisateur",
+            max_length=50,
     )
 
-    url = models.URLField(
-            verbose_name='URL',
-            max_length=255
+    email = models.EmailField(
+            verbose_name='Courriel',
     )
 
     project = models.ForeignKey(
@@ -97,13 +90,13 @@ class Contribution(Timestampable, models.Model):
             related_name='contributions',
     )
 
-    email = models.EmailField(
-            verbose_name='Courriel',
+    url = models.URLField(
+            verbose_name='URL',
+            max_length=255
     )
 
-    username = models.CharField(
-            verbose_name="Nom d'utilisateur",
-            max_length=50,
+    description = models.TextField(
+            verbose_name='Description du projet'
     )
 
     def __str__(self):

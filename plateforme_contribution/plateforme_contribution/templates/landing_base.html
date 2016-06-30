@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 {% load staticfiles %}
+{% load bootstrap3 %}
 <html>
     <head>
         <meta charset="UTF-8">
@@ -24,7 +25,11 @@
         <meta property="og:image" content="{% block fbpageimg %}{% endblock %}"/>
         <!-- end: Facebook Open Graph -->
 
-        <link href="{% static 'bootstrap-3.3.6-dist/css/bootstrap.min.css' %}" rel="stylesheet">
+        {# Load CSS and JavaScript #}
+        {% bootstrap_css %}
+
+
+
         <link href="{% static 'font-awesome-4.5.0/css/font-awesome.css' %}" rel="stylesheet">
         <link href="{% static 'css/style.css' %}" rel="stylesheet">
 
@@ -36,13 +41,40 @@
     <body class="centered-logo">
         {% include 'header.html' %}
 
-        {% block content %}{% endblock %}
+        <div class="body">
+            <div class="row">
+                <div class="col-sm-12">
+                    {% if messages %}
+                        {% for message in messages %}
+                            {% if message.tags == 'error' %}
+                                <div class="alert alert-danger alert-dismissible" style="margin-top: 10px;">
+                            {% elif message.tags == 'success'%}
+                                <div class="alert alert-success alert-dismissible" style="margin-top: 10px;">
+                            {% elif message.tags == 'info'%}
+                                <div class="alert alert-info alert-dismissible" style="margin-top: 10px;">
+                            {% elif message.tags == 'warning'%}
+                                <div class="alert alert-warning alert-dismissible" style="margin-top: 10px;">
+                            {% else %}
+                                <div class="alert alert-info alert-dismissible" style="margin-top: 10px;">
+                            {% endif %}
+                            <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                                <span aria-hidden="true">&times;</span>
+                            </button>
+                            {{ message }}
+                        {% endfor %}
+                    </div>
+                    {% endif %}
+                    </div>
+                    </div>
+                    {% block content %}{% endblock %}
+        </div>
+
 
         {% include 'footer.html' %}
 
         <script src="{% static 'js/libs/jquery-2.2.2.min.js' %}" type="application/javascript"></script>
-        <script src="{% static 'bootstrap-3.3.6-dist/js/bootstrap.min.js' %}" type="application/javascript"></script>
 
+        {% bootstrap_javascript %}
         <!-- WARNING :  Do not move this line before a manual import of script! -->
         {% block extrajs %}{% endblock %}
     </body>

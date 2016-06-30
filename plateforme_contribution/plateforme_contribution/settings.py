@@ -41,6 +41,7 @@ INSTALLED_APPS = [
     'plateforme_contribution',
     'pages',
     'projects',
+    'bootstrap3',
 ]
 
 MIDDLEWARE_CLASSES = [
