@@ -46,12 +46,15 @@ class ContributionCreate(generic.CreateView):
     model = Contribution
     template_name = 'contributions/create.html'
     form_class = ContributionForm
+
     def dispatch(self, *args, **kwargs):
         return super(ContributionCreate, self).dispatch(*args, **kwargs)
+
     def get_success_url(self):
         messages.add_message(
                 self.request,
                 messages.SUCCESS,
                 'Votre ontribution a bien été envoyée'
         )
+
         return reverse_lazy('projects:contribution_create')
