@@ -23,6 +23,11 @@
                     <h2>Liste des projets</h2>
                 </div>
             </div>
+            <div class="row" id="group-btn-contrib">
+                <div class="col-md-12 text-center">
+                    <a href="{% url 'projects:contribution_create'%}" class="btn btn-success btn-lg">Envoyer votre contribution</a>
+                </div>
+            </div>
             <div class="row">
                 {% if projects.count %}
                     {% if projects %}

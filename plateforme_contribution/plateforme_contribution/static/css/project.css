@@ -1,4 +1,3 @@
-@import url("//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css");
 .thumbnail {
   position: relative;
   padding: 0px;
@@ -11,6 +10,9 @@
     width: 100%; }
   .thumbnail table {
     width: 100%; }
+
+#group-btn-contrib {
+  padding: 20px; }
 
 a.btn-social,
 .btn-social {
