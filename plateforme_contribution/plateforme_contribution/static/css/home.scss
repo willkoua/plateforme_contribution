@@ -117,16 +117,18 @@
 #contributions .row:first-child{
     margin-bottom: 15%;
 }
-  /* partner
+  /* partners
   =================================================================== */
 .bloc-img-partner{
-    height: 100px;
-    padding-top: 20px;
+    height: 200px;
+    text-align: center;
+
+    img[alt="google"], img[alt="redhat"], img[alt="savoir faire linux"]{
+       padding-top: 45px;
+    }
 }
 
-.img-responsive[alt=firefox]{
-    margin-left: 30%;
-}
+
 
 /* Notice
 ====================================================================== */
