@@ -1,12 +1,17 @@
+@font-face {
+    font-family: Yellowtail;
+    src: url(../fonts/Yellowtail-Regular.ttf);
+}
 
 .textProgress {
     display: block;
     width: 100%;
     position: relative;
-    font-family: ralewayThin;
+    font-family: Yellowtail;
 }
 
 .tp {
+
     position: relative;
     white-space: nowrap;
     width: 100%;
