@@ -2,9 +2,4 @@
 *.css.map
 .idea/*
 /plateforme_contribution/db.sqlite3
-/plateforme_contribution/avatars_user/*
-/plateforme_contribution/avatars_org/*
-/plateforme_contribution/events/migrations/*
-/plateforme_contribution/members/migrations/*
-/plateforme_contribution/pages/migrations/*
-/plateforme_contribution/projects/migrations/*
+/plateforme_contribution/media/*

@@ -130,3 +130,7 @@ LOGIN_REDIRECT_URL = reverse_lazy('pages:home')
 # https://docs.djangoproject.com/en/1.8/howto/static-files/
 STATIC_ROOT = os.path.join(BASE_DIR, 'static')
 STATIC_URL = '/static/'
+# Media files (uploaded files, images)
+
+MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
+MEDIA_URL = '/media/'
