@@ -49,6 +49,13 @@ class Project(Timestampable, models.Model):
             verbose_name='Description du projet'
     )
 
+    enabled = models.BooleanField(
+        verbose_name='Activer',
+        null=False,
+        blank=False,
+        default=False
+    )
+
     logo = models.ImageField(
             upload_to="avatars_projects",
             verbose_name='Logo',
@@ -59,12 +66,6 @@ class Project(Timestampable, models.Model):
             Organization,
             verbose_name='Organization',
             related_name='projects'
-    )
-
-    delete_date = models.DateTimeField(
-            verbose_name='Archiver',
-            null=True,
-            blank=True
     )
 
     def __unicode__(self):
